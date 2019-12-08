@@ -1,0 +1,42 @@
+<idea-plugin>
+    <!-- 插件ID -->
+    <id>com.dragon.idea.plugins.generator.code.generator</id>
+    <name>Mybatis-Plus-CodeGenerator</name>
+    <version>1.0</version>
+    <vendor email="517306304@qq.com" url="https://gitbook.cn/gitchat/author/5acdcc9a525cf276d4ba4ec6">pengl</vendor>
+
+    <description><![CDATA[
+        基于MyBatis-Plus的自动代码生成插件.
+        <br>
+        <br>
+        Based on the automatic code generation of plug-in MyBatis-Plus.
+        <br>
+        作者： pengl
+        <br>
+        邮箱： 517306304@qq.com
+        <br>
+        主页： https://gitbook.cn/gitchat/author/5acdcc9a525cf276d4ba4ec6
+    ]]></description>
+
+    <change-notes><![CDATA[
+      V1.0
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="173.0"/>
+    <depends>com.intellij.modules.lang</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceInterface="com.dragon.idea.generator.model.GenerateConfig" serviceImplementation="com.dragon.idea.generator.model.GenerateConfig"/>
+    </extensions>
+
+    <actions>
+        <action id="CodeGenerateDialogAction"
+                class="com.dragon.idea.generator.action.CodeGenerateDialogAction" text="CodeGenerator"
+                description="code generator">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
